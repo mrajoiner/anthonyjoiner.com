@@ -12,3 +12,21 @@
 @media(max-width:520px){.project[data-project="beyond"] .project-name{font-size:8.15vw}.project[data-project="beyond"]{min-height:calc(9.8vw * 1.34)}}
 @media(max-width:850px){.stage{opacity:.32}}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Full-name identity and editorial image galleries. */
+.wordmark{font-family:Space,Arial,sans-serif;font-size:20px;font-weight:600;letter-spacing:-.055em;white-space:nowrap}
+.testimonial-portrait{display:block;width:100%;height:auto;aspect-ratio:350/260;object-fit:cover;margin-bottom:25px;filter:grayscale(1)}
+blockquote>p{margin:0}
+.book-library{padding:10px 0 65px;border-top:1px solid var(--line)}
+.book-library h2{font-family:Archivo,sans-serif;font-size:clamp(32px,5.5vw,80px);line-height:1;letter-spacing:-.065em;max-width:800px;margin:22px 0}
+.library-intro{font-size:18px;line-height:1.5;max-width:600px;margin:0 0 35px}
+.book-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:42px 28px;margin-bottom:40px}
+.student-book{text-decoration:none;display:flex;flex-direction:column;min-width:0}
+.book-art{background:#e4e6dd;padding:25px 22px;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.book-art img{display:block;width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain;box-shadow:5px 8px 16px #0003;transition:transform .25s}
+.student-book:hover .book-art img,.student-book:focus-visible .book-art img{transform:translateY(-6px) rotate(-2deg)}
+.student-book h3{font-size:18px;line-height:1.2;letter-spacing:-.035em;margin:17px 0 8px}
+.student-book p{font-size:10px;line-height:1.5;letter-spacing:.03em;color:#555c51;margin:0 0 15px}
+.book-action{font-size:10px;margin-top:auto;padding-top:8px}
+@media(max-width:850px){.book-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.wordmark{font-size:19px}}
+@media(max-width:520px){header{flex-wrap:wrap;gap:17px}.wordmark{font-size:22px}header nav{width:100%;justify-content:space-between}header nav .pill{gap:22px}main{padding-top:143px}.intro{font-size:7px;margin-bottom:24px}.stage{top:210px}.project{line-height:1.25}.project[data-project="beyond"]{min-height:calc(9.8vw * 1.25)}.book-grid{gap:30px 14px}.book-art{padding:15px 12px}.student-book h3{font-size:15px}.student-book p{font-size:8px}.library-intro{font-size:16px}.testimonial-portrait{margin-bottom:20px}}
