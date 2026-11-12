@@ -50,3 +50,17 @@ header{flex-wrap:wrap;gap:24px;padding:32px 28px}.wordmark{font-size:60px;line-h
 .opening-quote{position:relative;z-index:2;font-size:38px;line-height:1.3;font-weight:500;text-align:center;border:0;padding:36px 0 48px;max-width:1100px;margin:0 auto 20px;letter-spacing:-.035em}.opening-quote cite{font-size:22px;margin-top:24px;text-align:center}.opening-quote br{display:block}.intro{margin-bottom:0}.work-index{position:relative}.work-index .stage{top:0;bottom:35px}.artwork img[src*="headshot"]{object-position:center 25%}
 @media(max-width:850px){.wordmark{font-size:57px}.identity-icon{width:57px;height:57px}.opening-quote{font-size:38px;padding:30px 5px 40px}}
 @media(max-width:520px){header{padding:24px 16px;gap:24px}.wordmark{font-size:63px;line-height:1.02;gap:13px;align-items:flex-start;letter-spacing:-.065em}.identity-icon{width:63px;height:63px;margin-top:3px}.wordmark>span{overflow-wrap:normal}header nav{margin-left:0}.opening-quote{font-size:32px;line-height:1.28;text-align:center;padding:30px 4px 38px;margin-bottom:14px}.opening-quote br{display:none}.opening-quote cite{font-size:22px;text-align:center;margin-top:22px}.work-index .stage{top:0;bottom:35px}}
+
+/* Depth responds to scroll and pointer movement without shifting navigation. */
+.work-index .artwork{transform:translate3d(var(--parallax-x,0px),var(--parallax-y,0px),0) rotateY(calc(-19deg + var(--parallax-rotate,0deg))) rotateZ(9deg);transition:background .5s;will-change:transform}
+.work-index .stage-note{transform:translate3d(calc(var(--parallax-x,0px) * -.35),calc(var(--parallax-y,0px) * -.35),0) rotate(-8deg)}
+@media(max-width:850px){.project[data-project="music"] .project-name,.project[data-project="beyond"] .project-name{font-size:8.15vw}}
+@media(max-width:520px){.wordmark{font-size:clamp(48px,16.15vw,63px)}.identity-icon{width:1em;height:1em}}
+@media(prefers-reduced-motion:reduce){.work-index .artwork{transform:rotateY(-19deg) rotateZ(9deg);will-change:auto}.work-index .stage-note{transform:rotate(-8deg)}}
+
+.artwork img[data-preview="books"],.artwork img[data-preview="media"],.artwork img[data-preview="follow"],.artwork img[data-preview="people"],.artwork img[data-preview="resume"]{filter:none;mix-blend-mode:normal}
+.author-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px 30px;padding:5px 0 65px}.author-card{display:flex;flex-direction:column;padding:0;min-width:0}.author-card .book-art{background:#ffffff;max-height:420px}.author-card .eyebrow{font-size:10px;margin:22px 0 12px}.author-card h2{font-family:Space,sans-serif;font-size:21px;font-weight:600;line-height:1.2;letter-spacing:-.035em;margin:0 0 15px}.book-synopsis{font-size:16px;line-height:1.55;margin:0 0 22px}.author-card .action-link{margin-top:auto}
+@media(max-width:850px){.author-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:38px 24px}}
+@media(max-width:520px){.author-grid{grid-template-columns:1fr;gap:42px}.author-card .book-art{max-width:300px;max-height:390px;margin:0 auto;width:100%}}
+
+.stage img[data-preview="blooksy"],.stage img[data-preview="beyond"]{filter:none;mix-blend-mode:normal;}
